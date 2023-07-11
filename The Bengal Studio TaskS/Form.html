@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Form.js"></script>
+    <link rel="stylesheet" href="Form.css">
+
+</head>
+<body>
+  <form name="Form" onsubmit="return validateForm()" >
+    <h2>Registration Form</h2>
+    <div class="box">
+        <label>Full Name</label>
+        <input type="text" name="name" id="name">
+        <div class="error" id="nameerr"></div>
+    </div>
+    <div class="box">
+        <label>Email Address</label>
+        <input type="text" name="email" id="email">
+        <div class="error" id="emailerr"></div>
+    </div>
+<!--
+      <div class="box">
+        <label>Country code</label>
+        <input id="phone" type="tel" name="phone" />
+        <div class="error" id="countryerr"></div>
+      </div>
+-->
+      <div class="box">
+        <label>Phone Number</label>
+        <input type="text" name="mobile" id="mobile" maxlength="10">
+        <div class="error" id="mobileerr"></div>
+      </div>
+
+      <div class="box">
+        <label>Upload File</label>
+        <input type="file" name="upload" id="upload" accept=".pdf,.doc,.docx">
+        <div class="error" id="uploaderr"></div>
+      </div>
+
+      <div class="box">
+       <label>Select Range (Any 2)</label>
+       <div class="form-inline" id="select" name="select" >
+        <label><input type="checkbox" name="select" onclick=" validate()" value="1">5km</label>
+        <label><input type="checkbox" name="select" onclick=" validate()" value="1">10km</label>
+        <label><input type="checkbox" name="select" onclick=" validate()"  value="1">15km</label>
+       </div>
+       <div class="error" id="selecterr"></div>
+      </div>
+
+      <div class="box">
+        <label>Select Any Slot</label>
+        <div>
+        <select name="selectslot" id="selectslot">
+          <option>select</option>
+          <option>6 am</option>
+          <option>10 am</option>
+          <option>2 am</option>
+          <option>8 am</option>
+        </select>
+        </div>
+        <div class="error" id="sloterr"></div>
+      </div>
+
+
+      <div class="box">
+        <input type="submit" value="Submit" onclick=" validate()">
+      </div>
+    </form>
+</body>
+</html>
